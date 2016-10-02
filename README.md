@@ -19,4 +19,5 @@ Change the boot steps to include: -
 * check whether VMWare tools have been installed and make sure this worked!
 * can the keyboard config be changed through vagrant/bash? 
     * Add this as an option for the UK since this is currently set to US
-* 
+* Vagrant Up the fake communicator box and comment out the stuff I need to re-use
+    * MUST REMOVE VirtualBox specific settings FIRST before I do this!!
