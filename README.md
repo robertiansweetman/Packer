@@ -9,6 +9,15 @@
 
 1. VMware is very picky about the `"guest_os_type": "debian7-64",` was the only thing that workded which meant nothing built till I got this right...
 
+## VMWare packer file
+
+1. There are way more places to fall over in the VMWare packer file setup because I believe that since it's not a FREE option it's less widely documented...
+2. Things that I fell over:
+* vmx_data section -- you need to supply the value for `"scsi0.virtualDev": "lsisas1068"` in order to be able to mount the floppy drive and properly execute the autounnattended.xml file
+* `"tools_upload_flavour": "windows"` 
+* `"guest_os_type": "windows8srv-64"` does not follow convention because it's -64 not _64 as well as these being extremely obtuse
+3. Being able to VNC onto the machine as it's building is EXTREMELY USEFUL
+
 ### ToDo
 
 Change the boot steps to include: -
