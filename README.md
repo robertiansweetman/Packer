@@ -17,6 +17,7 @@
 * `"tools_upload_flavour": "windows"` 
 * `"guest_os_type": "windows8srv-64"` does not follow convention because it's -64 not _64 as well as these being extremely obtuse
 3. Being able to VNC onto the machine as it's building is EXTREMELY USEFUL
+4. https://github.com/mwrock/packer-templates/issues/49 This error was encountered
 
 ### ToDo
 
