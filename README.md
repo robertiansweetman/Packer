@@ -19,7 +19,7 @@
     * `"tools_upload_flavour": "windows"` 
     * `"guest_os_type": "windows8srv-64"` does not follow convention because it's -64 not _64 as well as these being extremely obtuse
 3. Being able to VNC onto the machine as it's building is EXTREMELY USEFUL
-4. https://github.com/mwrock/packer-templates/issues/49 This error was encountered << changed the files - currently in progress
+4. https://github.com/mwrock/packer-templates/issues/49 This error was encountered << changed seemed to have worked - see comments in PackerShutdown.bat and SetupComplete-2012.cmd
 5. Find out from Boxstarter config either how to load this locally
     * Temporarily remove the need to have all the windows upgrades applied which is in the boxstarter file?
 6. CURRENT STATUS - I have a .box image which can be used for Vagrant - have not tried it yet
