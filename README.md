@@ -37,3 +37,4 @@ Change the boot steps to include: -
 * Vagrant Up the fake communicator box and comment out the stuff I need to re-use
     * MUST REMOVE VirtualBox specific settings FIRST before I do this!!
 * Begin another repo for Vagrant images or at least the json files for Vagrant
+* Definitely consider using JSON files for config!! See Greg's examples in Slack chat 
