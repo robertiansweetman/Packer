@@ -8,6 +8,8 @@
 ## Debian packer file
 
 1. VMware is very picky about the `"guest_os_type": "debian7-64",` was the only thing that workded which meant nothing built till I got this right...
+2. CURRENT STATUS is that the fakecomm host part doesn't seem to load
+3. VMware tool do not seem to be loaded!! See Slack notes for a way to do this
 
 ## VMWare packer file
 
@@ -19,7 +21,8 @@
 3. Being able to VNC onto the machine as it's building is EXTREMELY USEFUL
 4. https://github.com/mwrock/packer-templates/issues/49 This error was encountered << changed the files - currently in progress
 5. Find out from Boxstarter config either how to load this locally
-    * Temporarily remove the need to have all the windows upgrades applied which is in the boxstarter file
+    * Temporarily remove the need to have all the windows upgrades applied which is in the boxstarter file?
+6. CURRENT STATUS - I have a .box image which can be used for Vagrant - have not tried it yet
 
 ### ToDo
 
