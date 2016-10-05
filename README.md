@@ -36,4 +36,4 @@ Change the boot steps to include: -
     * Add this as an option for the UK since this is currently set to US
 * Vagrant Up the fake communicator box and comment out the stuff I need to re-use
     * MUST REMOVE VirtualBox specific settings FIRST before I do this!!
-* Begin another repo for Vagrant images
+* Begin another repo for Vagrant images or at least the json files for Vagrant
