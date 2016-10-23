@@ -6,12 +6,17 @@
         "cpuid.coresPerSocket": "1",
         "memsize": "{{user `memory`}}",
         "numvcpus": "{{user `core`}}",
-        "scsi0.virtualDev": "lsisas1068"
+        "scsi0.virtualDev": "pvscsi",
+        "ethernet0.virtualDev": "vmxnet3",
+        "ethernet0.present": "true",
+        "ethernet0.startConnected": "true",
+        "ethernet0.addressType": "generated"
       },
       "boot_wait": "30s",
       "fusion_app_path": "Applications/VMWare Fusion.app",
       "guest_os_type": "windows8srv-64",
       "tools_upload_flavor": "windows",
+      "tools_upload_path": "C:/Users/vagrant/windows.iso",
       "headless": "{{ user `headless` }}",
       "iso_url": "{{ user `iso_url` }}",
       "iso_checksum": "{{ user `iso_checksum` }}",
@@ -24,9 +29,17 @@
       "shutdown_command": "a:/PackerShutdown.bat",
       "shutdown_timeout": "15m",
       "floppy_files": [
+        "vmxnet3drivers/vmxnet3ndis6.cat",
+        "vmxnet3drivers/vmxnet3ndis6.inf",
+        "vmxnet3drivers/vmxnet3n61x64.sys",
+        "vmxnet3drivers/vmxnet3ndis6ver.dll",
+        "pvdrivers/pvscsi.cat",
+        "pvdrivers/pvscsi.inf",
+        "pvdrivers/pvscsi.sys",
+        "pvdrivers/txtsetup.oem",
         "answer_files/2012_r2/Autounattend.xml",
         "scripts/postunattend.xml",
-        "scripts/boxstarter.ps1", 
+        "scripts/boxstarter.ps1",
         "scripts/PackerShutdown.bat",
         "scripts/package.ps1",
         "scripts/SetupComplete-2012.cmd",
@@ -37,7 +50,9 @@
   "provisioners": [
     {
       "type": "powershell",
-      "inline": ["choco install powershell -y"],
+      "inline": [
+        "choco install powershell -y"
+      ],
       "elevated_user": "vagrant",
       "elevated_password": "vagrant",
       "valid_exit_codes": [
@@ -55,12 +70,14 @@
     }
   ],
   "post-processors": [
-    [{
-      "type": "vagrant",
-      "keep_input_artifact": true,
-      "output": "windows2012r2min-wmf5-{{.Provider}}.box",
-      "vagrantfile_template": "vagrantfile-windows.template"
-    }]
+    [
+      {
+        "type": "vagrant",
+        "keep_input_artifact": true,
+        "output": "windows2012r2min-wmf5-{{.Provider}}.box",
+        "vagrantfile_template": "vagrantfile-windows.template"
+      }
+    ]
   ],
   "variables": {
     "core": "1",
