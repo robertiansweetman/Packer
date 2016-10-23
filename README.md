@@ -6,7 +6,7 @@ The starting point was Matt Wrock's ridiculously excellent blog and repo also on
 
 https://github.com/mwrock/packer-templates
 
-# Using this version. 
+# Using this version
 
 1. Check I've not missed anything out from Matt's repo (scripts especially) when I copied my changes back into this repo! I am coming back to this about 3 weeks after I began
 2. https://github.com/mwrock/packer-templates/issues/49 This error was encountered << changed seemed to have worked - see comments in PackerShutdown.bat and SetupComplete-2012.cmd
