@@ -25,9 +25,9 @@ https://www.packer.io/docs/other/debugging.html
 
 If you use Powershell like I do: -
 
-$env:PACKER_LOG=1
-$env:PACKER_LOG_PATH="packerlog.txt"
-packer build vmware-2012r2-wmf5.json
+* $env:PACKER_LOG=1
+* $env:PACKER_LOG_PATH="packerlog.txt"
+* packer build vmware-2012r2-wmf5.json
 
 I did think about turning off the 'auto-update' section of the box-starter/auto-unattended.xml file which takes 8 HOURS to complete what is currently >220 security updates. You don't want to run this then be unable to find out why/where it failed... 
 
